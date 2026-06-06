@@ -9,6 +9,8 @@
 
 <header>
     <h1>Sistema Help Desk</h1>
+    <p>Universidad Técnica de Manabí</p>
+    <p>Desarrollo de Sistemas Informáticos</p>
 </header>
 
 <nav>
@@ -19,53 +21,67 @@
 
 <main>
 
-<section>
-    <h2>Registro de Incidentes</h2>
+    <section>
+        <h2>Registro de Incidentes</h2>
 
-    <form>
+        <form>
 
-        <label for="titulo">Título del incidente:</label>
-        <br>
-        <input type="text" id="titulo" name="titulo">
+            <p>
+                <label for="titulo">Título del incidente:</label><br>
+                <input type="text"
+                       id="titulo"
+                       name="titulo"
+                       required
+                       minlength="5">
+            </p>
 
-        <br><br>
+            <p>
+                <label for="categoria">Categoría:</label><br>
 
-        <label for="categoria">Categoría:</label>
-        <br>
-        <select id="categoria">
-            <option>Red</option>
-            <option>Hardware</option>
-            <option>Software</option>
-        </select>
+                <select id="categoria" name="categoria" required>
+                    <option value="">Seleccione una categoría</option>
+                    <option value="Red">Red</option>
+                    <option value="Hardware">Hardware</option>
+                    <option value="Software">Software</option>
+                </select>
+            </p>
 
-        <br><br>
+            <fieldset>
+                <legend>Prioridad</legend>
 
-        <label>Prioridad:</label>
-        <br>
+                <input type="radio" id="alta" name="prioridad" value="Alta" required>
+                <label for="alta">Alta</label>
 
-        <input type="radio" name="prioridad"> Alta
-        <input type="radio" name="prioridad"> Media
-        <input type="radio" name="prioridad"> Baja
+                <input type="radio" id="media" name="prioridad" value="Media">
+                <label for="media">Media</label>
 
-        <br><br>
+                <input type="radio" id="baja" name="prioridad" value="Baja">
+                <label for="baja">Baja</label>
+            </fieldset>
 
-        <label for="descripcion">Descripción:</label>
-        <br>
+            <p>
+                <label for="descripcion">Descripción:</label><br>
 
-        <textarea id="descripcion" rows="5" cols="40"></textarea>
+                <textarea id="descripcion"
+                          name="descripcion"
+                          rows="5"
+                          cols="40"
+                          required></textarea>
+            </p>
 
-        <br><br>
+            <p>
+                <input type="submit" value="Enviar Incidente">
+                <input type="reset" value="Limpiar">
+            </p>
 
-        <input type="submit" value="Enviar">
+        </form>
 
-    </form>
-
-</section>
+    </section>
 
 </main>
 
 <footer>
-    <p>© 2026 Sistema Help Desk</p>
+    <p>© 2026 Sistema Help Desk - Universidad Técnica de Manabí</p>
 </footer>
 
 </body>
